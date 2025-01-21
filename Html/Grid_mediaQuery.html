@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Use of Grid And Media Query</title>
+    <style>
+        .container {
+            display: grid;
+            font-family: sans-serif;
+        }
+
+        .container>div {
+            padding: 15px;
+        }
+
+        .menu>div {
+            margin: 5px;
+            background-color: rgb(62, 169, 223);
+            color: azure;
+            height: 40px;
+            align-content: center;
+            padding-left: 10px;
+            font-weight: bold;
+            width : 100%;
+            font-size: large;
+
+        }
+
+        .header {
+
+            background-color: rgb(150, 59, 234);
+            color: azure;
+            font-family: sans-serif;
+            font-size: 20px;
+
+        }
+
+        .content {
+            font-size: large;
+        }
+
+        span {
+            position: relative;
+        }
+
+        @media screen and (min-width : 768px) {
+
+            .container {
+
+                grid-template-areas:
+                    "header header"
+                    "menu content";
+
+            }
+
+            .container>div.header {
+                grid-area: header;
+            
+
+            }
+
+            .container>div.menu {
+                grid-area: menu;
+            }
+
+            .container>span.content {
+                grid-area: content;
+                margin-left: 20px;
+            }
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Chania</h2>
+        </div>
+        <div class="menu">
+            <div class="m1">The Flight</div>
+            <div class="m2">The City</div>
+            <div class="m3">The Island</div>
+            <div class="m4">The Food</div>
+        </div>
+        <span class="content">
+            <h2>The City</h2>Chania is the capital of the Chania region on the island of Crete. The city can be divided
+            in two parts,the old town and the modern city.
+        </span>
+    </div>
+</body>
+
+</html>
