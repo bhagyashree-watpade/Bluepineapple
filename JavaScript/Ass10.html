@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Image Change</title>
   <style>
     body {
@@ -25,6 +23,17 @@
     }
 
   </style>
+
+   <script>
+    function change_img() {
+      // Change the image source
+      document.getElementById('image').src = 'Water.jpg';
+      
+      // Change the button text
+      this.textContent = 'Image Changed';
+    }
+      </script>
+    
 </head>
 <body>
 
@@ -34,17 +43,8 @@
     <button id="changeButton" onclick="change_img()">Change Image</button>
   </div>
 
-  <script>
-    function change_img() {
-      // Change the image source
-      document.getElementById('image').src = 'Water.jpg';
-      
-      // Change the button text
-      this.textContent = 'Image Changed';
-    }
-    
-    
-  </script>
+ 
+
 
 </body>
 </html>
