@@ -1,0 +1,43 @@
+<!-- 
+Task:
+1.	Create an HTML file with a `<div>` that has the text "Hello, World!".
+2.	Create a button that, when clicked, changes the text of the `<div>` to: "You clicked the button!".
+3.	Use JavaScript to attach an event listener to the button that triggers the text change.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        *{
+            font-size: larger;
+            text-align: center;
+            margin-top: 80px;
+
+        }
+        div{
+            margin: 10px;
+        }
+        button{
+            color:blueviolet;
+            padding: 5px;
+            margin: 10px;
+            align-self: center;
+        }
+    </style>
+    <script>
+        function change_div_text(){
+            let div_ele = document.getElementById("text");
+            div_ele.innerHTML="You clicked the button!";
+            document.getElementById("b1").remove();
+        }
+    </script>
+</head>
+<body>
+    <div id="text"> Hello World!</div>
+    <button id="b1" onclick="change_div_text()">Click Me</button>
+</body>
+</html>

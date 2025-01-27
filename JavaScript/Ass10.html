@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Change</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      
+    }
+
+    /*.container {
+      text-align: center;
+    }*/
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+     
+    <img id="image" src="dna.jpg" alt="DNA Image" width="500"><br><br>
+    <button id="changeButton" onclick="change_img()">Change Image</button>
+  </div>
+
+  <script>
+    function change_img() {
+      // Change the image source
+      document.getElementById('image').src = 'Water.jpg';
+      
+      // Change the button text
+      this.textContent = 'Image Changed';
+    }
+    
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+
+        }
+        button {
+            margin: 10px;
+            padding:20px;
+            border-radius: 6px;
+            font-size: 20px;
+        }
+        .blue{
+            background-color: #007BFF;
+            color: white;
+        }
+        .red{
+            background-color: #FF4136;
+            color: white;
+        }
+
+        p{
+            font-size: 26px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Change Text Color</h1>
+    <p id="text">This is paragraph content....... </p>
+    <button class="blue" onclick="changeToBlue()">Change color to Blue</button>
+    <button class="red" onclick="changeToRed()">Change color to Red</button>
+
+    <script>
+        function changeToBlue() {
+            document.getElementById('text').style.color = 'blue';
+        }
+
+        function changeToRed() {
+            document.getElementById('text').style.color = 'red';
+        }
+    </script>
+</body>
+</html>
