@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Table Example</title>
+</head>
+<body>
+  <!-- Custom Table Component -->
+  <custom-table id="dynamicTable" columns="Name, Age, Occupation" selectable></custom-table>
+
+  <script src="CustomTableElement.js"></script>
+  <script>
+    // Populate rows and handle events
+    const table = document.getElementById('dynamicTable');
+    table.rowsData = [
+      ['John Doe', 30, 'Engineer'],
+      ['Jane Smith', 25, 'Designer'],
+      ['Samuel Green', 40, 'Teacher']
+    ];
+
+    // Log row selection
+    table.addEventListener('row-select', (event) => {
+      console.log('Selected row:', event.detail);
+    });
+  </script>
+</body>
+</html>

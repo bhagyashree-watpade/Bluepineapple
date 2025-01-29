@@ -1,0 +1,63 @@
+<!-- 
+1.	Create a webpage that includes a button labeled "Add Item".
+2.	When the button is clicked, dynamically create a new list item (`<li>`) and append it to an existing unordered list (`<ul>`).
+3.	The new list item should contain the text "Item X" where X is the number of items currently in the list (e.g., "Item 1", "Item 2" etc.).
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <style>
+        div{
+            margin-left: 40%;
+            margin-top: 50px;
+            padding-left: 10px;
+            width: 40%;
+            height: fit-content;
+            
+        }
+        button{
+            
+            margin-top: 10px;
+            background-color: rgb(68, 68, 240);
+            color: white;
+            padding: 10px;
+            font-size: larger;
+            border-radius: 3rem;
+            
+        }
+        li{
+            font-size: larger;
+        }
+    </style>
+    <script>
+        let add_item = document.getElementById("add item");
+        let item_present = 1;  //variable to track the total elements currently present in the list
+        function add_list_element(){
+            //creating new li element
+            li = document.createElement("li");
+            //creating a node for the new element
+            li.appendChild( 
+                    document.createTextNode("Item "+ item_present)); 
+            
+            //append new list element to existing list
+            document.getElementById("parent").appendChild(li);
+            
+            //update item_present 
+            item_present += 1;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <button id="add item" onclick="add_list_element()"> Add Item </button>
+    <h2>Item List : </h2>
+    <ul id="parent">
+    </ul>
+</div>
+</body>
+</html>

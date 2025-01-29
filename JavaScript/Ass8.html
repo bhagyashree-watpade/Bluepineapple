@@ -1,0 +1,62 @@
+<!-- 
+    Task:
+1.	Create an HTML page with a `<div>` that has a class `box` (with a default background color like lightblue).
+2.	Create a button labeled "Toggle Color".
+3.	When the button is clicked, toggle the class `highlight` on the `<div>`, changing its background color (e.g., change to red when the class is added and back to lightblue when removed).
+4.	Use JavaScript to manipulate the class of the `<div>`.
+       
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Color</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(190, 226, 239);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px ;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .highlight {
+            background-color: red;
+        }
+
+        button {
+            display: block;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            margin: 20px ;
+            padding: 5px;
+            /*transition: background-color 0.2s ease;*/
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <button id="toggleButton">Toggle Color</button>
+
+    <script>
+        const box = document.getElementById("box");
+        const button = document.getElementById('toggleButton');
+
+        button.addEventListener('click', () => {
+            box.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>
