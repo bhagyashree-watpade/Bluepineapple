@@ -63,7 +63,7 @@ def insert_word_in_Order(new_word,word_meaning):
         print("\n"+new_Word + " added to Dictionary")
         
         
-# part2 : deletion 
+
 
 '''
 steps : 
